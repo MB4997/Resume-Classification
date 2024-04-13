@@ -11,15 +11,6 @@ parso==0.8.3
 pathy==0.10.2
 patsy==0.5.4
 pdf2docx==0.5.8
-pdfminer.six==20191110
-pdfplumber==0.11.0
-peewee==3.17.0
-pefile==2023.2.7
-phik==0.12.3
-pickleshare==0.7.5
-Pillow==10.0.1
-pipreqs==0.5.0
-platformdirs==3.10.0
 plotly==5.19.0
 preshed==3.0.9
 prometheus-client==0.17.1
