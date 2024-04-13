@@ -11,7 +11,7 @@ import pandas as pd
 import re
 import streamlit as st # streamlit run Resume_classification_web_app
 import pickle
-import numpy as np
+
 
 st.title('Resume Classifier')
 
@@ -72,7 +72,7 @@ def find_email_and_phone(text):
     emails = re.findall(email_pattern, text)
     phones = re.findall(phone_pattern, text)
     if emails or phones:
-        return emails[0] if emails else np.nan, phones[0] if phones else np.nan
+        return emails[0] if emails else 'Not Available', phones[0] if phones else 'Not Available'
     else:
         return 'Not Available','Not Available'
 
@@ -137,7 +137,6 @@ if selected_page == 'Upload Resume':
                 category_ = predicted_category
                 df['Category'].append(category_)
             else:
-                category = np.nan
                 st.warning("No category found for {}".format(uploaded_file.name))
 
             years_of_exp = extract_exp(resume_text)
